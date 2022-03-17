@@ -1,0 +1,168 @@
+@import "./vars";
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*--------------------*/
+
+body {
+  font-family: $main-font;
+  background-color: $dark;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btns-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.login-btn {
+  display: inline-block;
+  padding: 10px 0;
+  min-width: 165px;
+  text-align: center;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $light;
+  border: 1px solid $light;
+  border-radius: 37px;
+  border: none;
+  transition: 0.3s;
+
+  &:hover {
+    border: 1px solid $light;
+  }
+
+  &:active {
+    background-color: $light;
+  }
+}
+
+.trail-btn {
+  display: inline-block;
+  padding: 10px 0;
+  min-width: 165px;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 11px 0;
+  color: $light;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  border: 1px solid $accent-color;
+  background-color: $accent-color;
+  border-radius: 37px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $light;
+  }
+
+  &:active {
+    background-color: $light;
+  }
+}
+
+.title {
+  font-family: $accent-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  text-align: center;
+}
+.description {
+  max-width: 493px;
+  margin: 0 auto;
+  margin-top: 14px;
+
+  font-family: $accent-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}

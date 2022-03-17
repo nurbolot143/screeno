@@ -1,0 +1,36 @@
+@import "../vars";
+
+.business {
+  color: $light;
+  padding: 0 0 116px 0;
+  &__title {
+  }
+
+  &__description {
+  }
+
+  &__btns-wrapper {
+    justify-content: center;
+    margin: 55px 0 89px 0;
+  }
+
+  &__trail-btn {
+    margin: 15px;
+    background-color: $light;
+    color: $dark;
+    border: 1px solid $light;
+
+    &:hover {
+      color: $light;
+    }
+  }
+
+  &__logo-btn {
+    margin: 15px;
+  }
+
+  &__image {
+    max-width: 840px;
+    margin: 0 auto;
+  }
+}

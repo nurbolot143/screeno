@@ -1,0 +1,65 @@
+@import "../vars";
+
+.intro {
+  padding: 70px 0;
+  color: $light;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 130px 0;
+  }
+
+  &__body {
+    flex: 0 1 490px;
+    margin: 0 20px 0 0;
+  }
+
+  &__title {
+    margin: 0 0 17px 0;
+    font-family: $accent-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 60px;
+  }
+
+  &__text {
+    margin: 0 0 4px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &__btns-wrapper {
+  }
+
+  &__btn {
+    margin: 10px 30px 10px 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__image {
+    flex: 0 1 575px;
+    margin: 0 -40px 0 0;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__bottom {
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+  }
+}

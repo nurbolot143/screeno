@@ -1,0 +1,64 @@
+@import "../vars";
+
+.help {
+  padding: 61px 0 0 0;
+  color: $light;
+
+  &__title {
+    margin: 0 0 52px 0;
+  }
+
+  &__item {
+    margin: 0 0 216px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__body {
+    flex: 0 1 441px;
+  }
+
+  &__subtitle {
+    margin: 0 0 26px 0;
+    font-family: $accent-font;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  &__text {
+    margin: 0 0 26px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &__link {
+    padding: 0 29px 0 0;
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: inherit;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 100%;
+      right: 0;
+      background: url("../../img/icons/Arrow.svg") right 7px no-repeat;
+    }
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+  &__image {
+    flex: 0 1 604px;
+  }
+}
