@@ -7,6 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Mulish:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Mulish:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Mulish:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Mulish:wght@300;400;500;600;700;800&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -96,6 +97,11 @@ h6 {
 }
 
 /*--------------------*/
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Mulish", sans-serif;
   background-color: #141516;
@@ -589,4 +595,147 @@ body {
 
 .live__item img {
   width: 100%;
+}
+
+.footer {
+  background-color: #f7f9fa;
+}
+
+.footer__body {
+  padding: 78px 0 56px 0;
+}
+
+.footer__row {
+  margin: 0 0 0 -28px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.footer__column {
+  padding: 0 28px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 300px;
+      -ms-flex: 0 1 300px;
+          flex: 0 1 300px;
+}
+
+.footer__logo {
+  margin: 4px 0 24px 0;
+}
+
+.footer__item {
+  margin: 0 0 22px 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.footer__item a {
+  color: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__item a svg {
+  margin: 3px 10px 0 0;
+}
+
+.footer__link {
+  display: inline-block;
+  margin: 0 16px 0 0;
+}
+
+.footer__title {
+  margin: 0 0 20px 0;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.footer__form {
+  padding: 0 0 0 30px;
+  max-width: 516px;
+}
+
+.footer__form input,
+.footer__form textarea {
+  width: 100%;
+  background: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  padding: 13px 18px;
+  border: 1px solid #efefef;
+  -webkit-border-radius: 13px;
+          border-radius: 13px;
+}
+
+.footer__form input:focus,
+.footer__form textarea:focus {
+  -webkit-box-shadow: 0 0 5px 1px #c9c9c9;
+          box-shadow: 0 0 5px 1px #c9c9c9;
+}
+
+.footer__form input {
+  margin: 0 0 18px 0;
+}
+
+.footer__form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.footer__form button {
+  display: inline-block;
+  margin: 19px 0 0 0;
+  padding: 12px 37px;
+  border: 1px solid #006aff;
+  -webkit-border-radius: 37px;
+          border-radius: 37px;
+  background-color: #006aff;
+  color: #ffffff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__form button:hover {
+  background-color: transparent;
+  border: 1px solid #141516;
+  color: #141516;
+}
+
+.footer__form button:active {
+  background-color: #141516;
+}
+
+.footer__bottom {
+  position: relative;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  padding: 19px 0 21px 0;
+  text-align: center;
+}
+
+.footer__bottom::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: 0;
+  background-color: #c9c9c9;
 }

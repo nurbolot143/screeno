@@ -1,0 +1,130 @@
+@import "../vars";
+
+.footer {
+  background-color: $gray;
+  &__body {
+    padding: 78px 0 56px 0;
+  }
+
+  &__row {
+    margin: 0 0 0 -28px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__column {
+    padding: 0 28px;
+    flex: 0 1 300px;
+  }
+
+  &__logo {
+    margin: 4px 0 24px 0;
+  }
+
+  &__item {
+    margin: 0 0 22px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    a {
+      color: inherit;
+      display: flex;
+
+      svg {
+        margin: 3px 10px 0 0;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin: 0 16px 0 0;
+  }
+
+  &__title {
+    margin: 0 0 20px 0;
+    font-family: $accent-font;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__list {
+  }
+
+  &__form {
+    padding: 0 0 0 30px;
+    max-width: 516px;
+
+    input,
+    textarea {
+      width: 100%;
+      background: $light;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      padding: 13px 18px;
+      border: 1px solid #efefef;
+      border-radius: 13px;
+
+      &:focus {
+        box-shadow: 0 0 5px 1px #c9c9c9;
+      }
+    }
+
+    input {
+      margin: 0 0 18px 0;
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    button {
+      display: inline-block;
+      margin: 19px 0 0 0;
+      padding: 12px 37px;
+      border: 1px solid $accent-color;
+      border-radius: 37px;
+      background-color: $accent-color;
+      color: $light;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: transparent;
+        border: 1px solid $dark;
+        color: $dark;
+      }
+
+      &:active {
+        background-color: $dark;
+      }
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+
+    padding: 19px 0 21px 0;
+    text-align: center;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      top: 0;
+      left: 0;
+      background-color: #c9c9c9;
+    }
+  }
+}
