@@ -3,6 +3,15 @@
 .business {
   color: $light;
   padding: 0 0 116px 0;
+
+  @include media(820) {
+    padding: 0 0 80px 0;
+  }
+
+  @include media(565) {
+    padding: 0 0 40px 0;
+  }
+
   &__title {
   }
 
@@ -12,6 +21,14 @@
   &__btns-wrapper {
     justify-content: center;
     margin: 55px 0 89px 0;
+
+    @include media(630) {
+      margin: 20px 0 40px 0;
+    }
+
+    @include media(420) {
+      margin: 20px 0;
+    }
   }
 
   &__trail-btn {
@@ -30,7 +47,12 @@
   }
 
   &__image {
-    max-width: 840px;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
+
+    img {
+      max-width: 100%;
+    }
   }
 }

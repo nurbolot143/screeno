@@ -1,9 +1,14 @@
 @import "../vars";
+@import "../media";
 
 .platform {
   background-color: $light;
   padding: 106px 0 58px 0;
   color: $dark;
+
+  @include media(630) {
+    padding: 50px 0 0 0;
+  }
 
   &__wrapper {
     max-width: 905px;
@@ -21,6 +26,10 @@
   &__btns-wrapper {
     justify-content: center;
     margin: 50px 0 110px 0;
+
+    @include media(630) {
+      margin: 20px 0 40px 0;
+    }
   }
 
   &__btn {
@@ -44,12 +53,20 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include media(505) {
+      justify-content: center;
+    }
   }
 
   &__column {
     flex: 0 0 240px;
     padding: 0 6px;
     margin: 0 0 74px 0;
+
+    @include media(565) {
+      margin: 0 0 40px 0;
+    }
   }
 
   &__item {

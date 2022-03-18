@@ -1,28 +1,73 @@
 @import "../vars";
+@import "../media";
 
 .live {
   padding: 0 0 200px 0;
   background-color: $light;
 
+  @include media(820) {
+    padding: 0 0 100px 0;
+  }
+
+  @include media(485) {
+    padding: 0 0 50px 0;
+  }
+
   &__title {
     padding: 133px 0 0 0;
+
+    @include media(630) {
+      padding: 40px 0 0 0;
+    }
   }
 
   &__description {
     margin-bottom: 98px;
+
+    @include media(920) {
+      margin-bottom: 70px;
+    }
+
+    @include media(630) {
+      margin-bottom: 50px;
+    }
   }
 
   &__row {
+    position: relative;
+    width: 120%;
+    transform: translateX(-8.5%);
     display: flex;
     justify-content: center;
+    flex-wrap: wrap-reverse;
   }
 
   &__item {
-    flex: 0 0 360px;
+    flex: 0 1 360px;
     height: 201px;
     margin: 15px;
     border-radius: 27px;
     overflow: hidden;
+
+    @include media(920) {
+      flex: 0 1 260px;
+      height: 145.1px;
+      margin: 10px;
+    }
+
+    @include media(485) {
+      flex: 0 1 160px;
+      height: 89.3px;
+      margin: 7px;
+      border-radius: 17px;
+    }
+
+    @include media(290) {
+      flex: 0 1 100px;
+      height: 55.83px;
+      margin: 4px;
+      border-radius: 10px;
+    }
 
     img {
       width: 100%;

@@ -1,4 +1,5 @@
 @import "./vars";
+@import "./media";
 
 /*Обнуление*/
 * {
@@ -162,6 +163,10 @@ body {
   font-size: 48px;
   line-height: 59px;
   text-align: center;
+
+  @include media(565) {
+    font-size: 35px;
+  }
 }
 .description {
   max-width: 493px;

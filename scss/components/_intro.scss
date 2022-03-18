@@ -1,19 +1,46 @@
 @import "../vars";
+@import "../media";
 
 .intro {
+  margin-top: 70px;
   padding: 70px 0;
   color: $light;
+
+  @include media(930) {
+    margin-top: 30px;
+  }
+
+  @include media(630) {
+    margin-top: 0;
+  }
+
+  @include media(440) {
+    padding-bottom: 20px;
+  }
 
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 0 130px 0;
+
+    @include media(820) {
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
+
+    @include media(560) {
+      margin-bottom: 30px;
+    }
   }
 
   &__body {
     flex: 0 1 490px;
     margin: 0 20px 0 0;
+
+    @include media(820) {
+      flex: 1 1 auto;
+    }
   }
 
   &__title {
@@ -50,16 +77,27 @@
     img {
       max-width: 100%;
     }
+
+    @include media(820) {
+      margin: 10px auto;
+    }
   }
 
   &__bottom {
   }
 
   &__list {
+    margin: 0 0 0 -15px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include media(930) {
+    }
   }
 
   &__item {
+    padding: 10px 15px;
   }
 }
