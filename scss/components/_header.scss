@@ -81,17 +81,17 @@
       min-width: 165px;
       text-align: center;
       border-radius: 37px;
-      border: none;
       transition: 0.3s;
-
+      border: 1px solid $dark;
       color: $dark;
 
       &:hover {
-        border: 1px solid $dark;
+        background-color: $dark;
+        color: $light;
       }
 
       &:active {
-        background-color: $dark;
+        background-color: $accent-color;
       }
     }
   }

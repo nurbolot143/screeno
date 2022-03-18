@@ -118,15 +118,17 @@ body {
   color: $light;
   border: 1px solid $light;
   border-radius: 37px;
-  border: none;
   transition: 0.3s;
 
   &:hover {
     border: 1px solid $light;
+    background-color: $light;
+    color: $dark;
+    font-weight: bold;
   }
 
   &:active {
-    background-color: $light;
+    background-color: $accent-color;
   }
 }
 

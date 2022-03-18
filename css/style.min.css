@@ -149,7 +149,6 @@ body_lock {
   border: 1px solid #ffffff;
   -webkit-border-radius: 37px;
           border-radius: 37px;
-  border: none;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -157,10 +156,13 @@ body_lock {
 
 .login-btn:hover {
   border: 1px solid #ffffff;
+  background-color: #ffffff;
+  color: #141516;
+  font-weight: bold;
 }
 
 .login-btn:active {
-  background-color: #ffffff;
+  background-color: #006aff;
 }
 
 .trail-btn {
@@ -336,17 +338,18 @@ body_lock {
     text-align: center;
     -webkit-border-radius: 37px;
             border-radius: 37px;
-    border: none;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
+    border: 1px solid #141516;
     color: #141516;
   }
   .header__login-btn:hover {
-    border: 1px solid #141516;
+    background-color: #141516;
+    color: #ffffff;
   }
   .header__login-btn:active {
-    background-color: #141516;
+    background-color: #006aff;
   }
 }
 
@@ -694,10 +697,6 @@ body_lock {
   margin: 0 15px;
 }
 
-.platform__btn:last-child {
-  color: #141516;
-}
-
 .platform__btn:hover {
   border: 1px solid #141516;
   color: #141516;
@@ -705,6 +704,21 @@ body_lock {
 
 .platform__btn:active {
   background-color: #141516;
+}
+
+.platform__btn:last-child {
+  color: #141516;
+  border: 1px solid #141516;
+}
+
+.platform__btn:last-child:hover {
+  background-color: #141516;
+  color: #ffffff;
+  font-weight: inherit;
+}
+
+.platform__btn:last-child:active {
+  background-color: #006aff;
 }
 
 .platform__row {
