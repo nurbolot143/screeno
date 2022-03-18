@@ -1,32 +1,176 @@
 @import "../vars";
+@import "../media";
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   color: $light;
   text-transform: capitalize;
+  z-index: 40;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $dark;
+    z-index: 3;
+  }
 
   &__wrapper {
     height: 70px;
     display: flex;
     align-items: center;
+
+    @include media(630) {
+      justify-content: space-between;
+    }
   }
 
   &__logo {
     flex: 0 1 195px;
+    z-index: 4;
+    transition: all 0s ease 0.3s;
   }
 
   &__right {
+    @include media(970) {
+      flex: 1 1 auto;
+    }
+
+    @include media(630) {
+      padding: 5px 0;
+      position: fixed;
+      width: 100%;
+      bottom: -100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      left: 0;
+      background-color: $light;
+      transition: all 0.3s ease 0.2s;
+    }
+
+    &_active {
+      bottom: 0;
+    }
+
+    z-index: 4;
   }
 
   &__login-btn {
-    margin: 0 26px 0 0;
+    text-transform: capitalize;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0 85px 0 0;
+    color: inherit;
+    padding: 24px 0;
+    margin: 0 56px 0 0;
+
+    @include media(630) {
+      margin: 5px 30px;
+      display: inline-block;
+      padding: 10px 0;
+      min-width: 165px;
+      text-align: center;
+      border-radius: 37px;
+      border: none;
+      transition: 0.3s;
+
+      color: $dark;
+
+      &:hover {
+        border: 1px solid $dark;
+      }
+
+      &:active {
+        background-color: $dark;
+      }
+    }
   }
 
-  &__trial {
+  &__trial-btn {
+    @include media(630) {
+      margin: 5px 30px;
+
+      &:hover {
+        border: 1px solid $dark;
+        color: $dark;
+      }
+
+      &:active {
+        background-color: $dark;
+      }
+    }
+  }
+
+  &__burger {
+    z-index: 4;
+    display: none;
+
+    @include media(970) {
+      display: block;
+      position: relative;
+      width: 45px;
+      height: 25px;
+      cursor: pointer;
+
+      span {
+        top: 50%;
+        margin: -1.5px 0 0 0;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        border-radius: 2px;
+        background-color: $light;
+        transition: 0.5s;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 3px;
+        border-radius: 2px;
+        background-color: $light;
+        transition: 0.3s;
+      }
+
+      &::before {
+        top: 0;
+        left: 0;
+      }
+
+      &::after {
+        bottom: 0;
+        right: 0;
+      }
+
+      &_active span {
+        transform: rotate(-45deg);
+      }
+
+      &_active::before {
+        transform: rotate(45deg) translateX(4px);
+      }
+
+      &_active::after {
+        transform: rotate(45deg) translateX(-4px);
+      }
+    }
   }
 }
 
 .menu {
   flex: 1 1 auto;
+  z-index: 4;
 
   &__list {
     display: flex;
@@ -47,5 +191,42 @@
     &:last-child {
       margin: 0;
     }
+  }
+
+  @include media(970) {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $light;
+    color: $dark;
+    padding: 70px 10px 20px 10px;
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+    z-index: 2;
+
+    &_active {
+      top: 0;
+    }
+
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    &__item {
+      margin: 4px 0;
+      font-size: 25px;
+      width: 100%;
+      a {
+        padding: 5px 20px;
+      }
+    }
+  }
+
+  @include media(630) {
+    height: calc(100% - 35px);
   }
 }

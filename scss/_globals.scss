@@ -85,6 +85,10 @@ body {
 body {
   font-family: $main-font;
   background-color: $dark;
+
+  &_lock {
+    overflow: hidden;
+  }
 }
 
 .container {
