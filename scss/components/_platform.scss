@@ -28,12 +28,16 @@
     margin: 50px 0 110px 0;
 
     @include media(630) {
-      margin: 20px 0 40px 0;
+      margin: 20px 0 0 0;
     }
   }
 
   &__btn {
     margin: 0 15px;
+
+    @include media(630) {
+      margin: 0 15px 30px 15px;
+    }
 
     &:hover {
       border: 1px solid $dark;
